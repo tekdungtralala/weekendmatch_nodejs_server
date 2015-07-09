@@ -1,5 +1,6 @@
-var db = require('./db');
 var promise = require('bluebird');
+
+var db = require('./../db');
 
 module.exports = {
 	getAllTeam: getAllTeam // Get all teams from db

@@ -1,16 +1,16 @@
-var db = require('./db');
 var _ = require('lodash');
 var moment = require('moment');
-
 var promise = require('bluebird');
-var team = require('./team');
+
+var db = require('./../db');
+var teamService = require('./team.service.js');
 
 module.exports = {
 	getRanks: getRanks
 };
 
 function getRanks(query) {
-	var arr = [team.getAllTeam(), getRanksFN(query)];
+	var arr = [teamService.getAllTeam(), getRanksFN(query)];
 
 	return promise.all(arr).then(processRankData);
 }

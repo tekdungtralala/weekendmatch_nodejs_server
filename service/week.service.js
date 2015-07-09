@@ -1,6 +1,7 @@
-var db = require('./db');
 var promise = require('bluebird');
 var _ = require('lodash');
+
+var db = require('./../db');
 
 module.exports = {
 	getallWeek: getallWeek, // Get all weeks from db

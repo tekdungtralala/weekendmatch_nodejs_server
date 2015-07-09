@@ -1,9 +1,9 @@
-var db = require('./db');
 var _ = require('lodash');
 var moment = require('moment');
-
 var promise = require('bluebird');
-var team = require('./team');
+
+var db = require('./../db');
+var teamService = require('./team.service.js');
 
 module.exports = {
 	getMatchdays: getMatchdays, // Get all matchday
@@ -30,7 +30,7 @@ function getMatchdays(query) {
 	// Need to get all_team, then we will change the reference id 
 	//  with the real team data
 	var arr = [
-		team.getAllTeam(), 
+		teamService.getAllTeam(), 
 		getMatchdaysFN(query)
 	];
 
