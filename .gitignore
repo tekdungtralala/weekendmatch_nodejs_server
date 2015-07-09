@@ -1,7 +1,5 @@
 node_modules/*
-app/*
-eplweb_components/*
+public/*
 
-index.html
 test1.js
 mongo-temp.txt
